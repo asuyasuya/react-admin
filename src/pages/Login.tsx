@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {SyntheticEvent, useState} from 'react';
 import '../Login.css';
+import axios from "axios";
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const submit = async (e: SyntheticEvent) => {
+        e.preventDefault();
+
+        await axios.post('http://localhost:8000/api/admin/login',{
+            email,
+            password
+        });
+    }
     return (
         <main className="form-signin">
-            <form>
+            <form onSubmit={submit}>
                 <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
                 <div className="form-floating">
