@@ -4,6 +4,7 @@ import {BrowserRouter,Routes, Route} from 'react-router-dom';
 import Users from "./pages/Users";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Links from "./pages/Links";
 import {RedirectToUsers} from "./componets/RedirectToUsers";
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path={'/'} element={<RedirectToUsers/>} />
-                    <Route path={'/users'} element={<Users/>}/>
                     <Route path="/login" element={<Login />} />
                     <Route path={'/register'} element={<Register />}/>
+                    <Route path={'/users'} element={<Users/>}/>
+                    <Route path={'/users/:id/links'} element={<Links/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
