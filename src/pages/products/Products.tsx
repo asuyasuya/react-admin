@@ -61,6 +61,9 @@ const Products = () => {
                                 <TableCell>{product.description}</TableCell>
                                 <TableCell>{product.price}</TableCell>
                                 <TableCell>
+                                    <Button variant={"contained"} color={"primary"}
+                                            href={`/product/${product.id}/edit`}
+                                    >Edit</Button>
                                     <Button variant={"contained"} color={"error"}
                                             onClick={() => del(product.id)}
                                     >Delete</Button>
