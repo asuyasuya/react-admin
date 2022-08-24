@@ -1,4 +1,4 @@
-import React, {SyntheticEvent, useState} from 'react';
+import React, {SyntheticEvent, useEffect, useState} from 'react';
 import Layout from "../../componets/Layout";
 import {Button, TextField} from "@mui/material";
 import axios from "axios";
@@ -10,6 +10,11 @@ const ProductForm = () => {
     const [image, setImage] = useState('');
     const [price, setPrice] = useState(0);
     const [redirect, setRedirect] = useState(false);
+
+    useEffect(() => {
+
+        }
+    )
 
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
